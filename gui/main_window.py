@@ -317,7 +317,7 @@ class CardGridViewer(QWidget):
     def save_current_deck(self):
         name = self.deck_name_input.text().strip()
         if not name:
-            name = "deck" + str(len(self.deck_list))
+            name = "deck"
         self.saved_decks[name] = copy(self.current_deck)
         # Add to list widget if new
         existing_names = [self.deck_list.item(i).text() for i in range(self.deck_list.count())]
